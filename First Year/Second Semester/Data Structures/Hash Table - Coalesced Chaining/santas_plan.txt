@@ -1,0 +1,11 @@
++laptop
++praji
++globuri
+-praji
++alune
++cozonac
++teddy
+-teddy
+-laptop
+-laptop
+end

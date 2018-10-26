@@ -1,0 +1,22 @@
+Delivering presents to every kid in the world ain't no easy job! You might find out that you ran out of present while being thousands of kilometres away from your home! Santa has elf toy factories all around the globe, wich can provide him with some toys. So in his journey, santa can either pickup a present from his elfs (+item), or deliver it to some nice kid! (-item). However, if he doesn't pack his bag well enought or his elfs don't produce the neccesary number of presents, some nice kid's Christmas will be ruined, since Santa won't have a gift to give! To avoid a situation like this, you will help santa see in advance if he can carry out the journey, or if he needs to better prepare himself and his elfs.
+
+Example: santa's_plan.txt
+	+nutcracker
+	+doll
+	+doll
+	+shoes
+	-doll
+	-shoes
+	+cookies
+
+	Output: Santa is able to complete his journey! Hooray!
+
+Example: santa's_plan.txt
+	+doll
+	+teddy
+	+cookies
+	-doll
+	-laptop //here it fails, since santa does not have a laptop
+	...
+
+i	Output: Santa needs to look over his plan and make a few tweaks! Good luck, Santa!
