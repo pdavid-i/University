@@ -1,0 +1,18 @@
+EXE STACK
+
+SYM TABLE
+x->14
+OUTPUT
+14 
+_____________________
+EXE STACK
+Assign statement: Name b Value: 3
+Assign statement: Name c Value: a + b
+Print statement: c
+Assign statement: Name a Value: 7
+
+SYM TABLE
+
+OUTPUT
+
+_____________________

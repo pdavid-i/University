@@ -1,0 +1,29 @@
+_________________________
+ExeStack:
+ReadFile Statement, variable: var_c; Print statement: var_c; If Statement: if(var_c) then ReadFile Statement, variable: var_c; Print statement: var_c else Print statement: 0 end; CloseRFile Statement
+OpenRFile Statement, filename: test.in.txt, varFileId: var_f, id: 1
+
+SymTable:
+
+Out:
+
+_________________________
+_________________________
+ExeStack:
+ReadFile Statement, variable: var_c; Print statement: var_c; If Statement: if(var_c) then ReadFile Statement, variable: var_c; Print statement: var_c else Print statement: 0 end; CloseRFile Statement
+
+SymTable:
+var_f->1
+Out:
+
+_________________________
+_________________________
+ExeStack:
+Print statement: var_c; If Statement: if(var_c) then ReadFile Statement, variable: var_c; Print statement: var_c else Print statement: 0 end; CloseRFile Statement
+ReadFile Statement, variable: var_c
+
+SymTable:
+var_f->1
+Out:
+
+_________________________

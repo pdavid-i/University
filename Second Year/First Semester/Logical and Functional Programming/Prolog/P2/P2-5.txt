@@ -1,0 +1,65 @@
+%addAtEnd(L - list, E - added elem, R - result list)
+%flow: addAtEnd(i, i, o)
+%addAtEnd(L, E): L U E, L=[]
+%				 a1 U (a2, ..), otherwise
+addAtEnd([], E, [E]).
+addAtEnd([H|T], E, [H|R]):-
+    addAtEnd(T, E, R).
+
+%concatListsBeg(L1 - first list, L2 - second list, R - result list)
+%flow: concatListsBeg(i, i, o)
+%concatListsBeg(L1, L2): [], 		L1 = [] and L2 = []
+%						 L1, 		L2 = []
+%						 L1 U L2, 	otherwise
+concatListsBeg([], [], []).
+concatListsBeg(R, [], R).
+concatListsBeg(L1, [L2H|L2T], R):-
+    addAtEnd(L1, L2H, R1),
+    concatListsBeg(R1, L2T, R).
+
+%replaceList(L - list, El - element that will be replaced
+%			 RepL - the elements that will replace EL, R - result list
+%flow: replaceList(i, i, i, o)
+%replaceList(L, El, RepL): [],							 			L =[]             
+%						   a1 U replaceLists((a2...), El, RepL), 	a1 != El or a1 is list
+%						   RepL U replaceLists((a2, ...) El, RepL)otherwise
+replaceList([], _, _, []).
+replaceList([H|T], El, RepL, R):-
+    is_list(H),
+    replaceList(T, El, RepL, R1),
+    R = [H|R1].
+replaceList([H|T], El, RepL, R):-
+    H =:= El,
+    replaceList(T, El, RepL, R1),
+    concatListsBeg(RepL, R1, R).
+
+replaceList([H|T], El, RepL, R):-
+    H =\= El,
+    replaceList(T, El, RepL, R1),
+    R = [H|R1].
+
+%replaceAllLists(L - list, ReplaceL - replacement list, 
+%				 ElWasPicked - verifies if first element was chosen, 
+%				 R - result list)
+%flow: replaceAllLists(i, i, i, o)
+%replaceAllLists(L, ReplaceL, ElWasPicked):	[],					L=[]
+%		    replaceAllLists(a1, ReplaceL, 0) 
+%		  U replaceAllLists((a2, ...), ReplaceL, ElWasPicked), 	a1 is list
+%		replaceList((a1, ...), a1, ReplaceL) U replaceAllLists((a2, ...), ReplaceL, ElWasPicked), ElWasPicked = 0;
+%		replaceAllLists((a2, ...), ReplaceL, ElWasPicked),	otherwise
+replaceAllLists([], [_|_], _, []).
+replaceAllLists([H|T], ReplaceL, ElWasPicked, R):-
+    is_list(H),
+    replaceAllLists(T, ReplaceL, ElWasPicked, R1),
+    replaceAllLists(H, ReplaceL, 0, R2),
+    R = [R2|R1].
+
+replaceAllLists([H|T], ReplaceL, ElWasPicked, R):-
+    ElWasPicked =:= 1,
+    replaceAllLists(T, ReplaceL, 1, R2),
+    R = [H|R2].
+
+replaceAllLists([H|T], ReplaceL, ElWasPicked, R):-
+    ElWasPicked =:= 0,
+    replaceAllLists(T, ReplaceL, 1, R1),
+    replaceList([H|R1], H, ReplaceL, R).

@@ -1,0 +1,10 @@
+--Create a database that allows the management of an Ocean exploration system. The entities in the system are:
+--Teams, Oceans, Ships and Sensors. An Ocean has a name and an average depth. A Ship has a capacity, a name and
+--belongs to only one team. A team has a name and can own multiple ships. Sensors have a serial id, the longitude
+--and latitude of their location, the Ocean they were deployed in, and the Team that owns them. Sensors gather
+--data about the ocean waves, such as height, propagation, period and propagation. You have to:
+--a) Design a suiting database for this task
+--b) Create a procedure that takes as parameters a serial Id, an ocean, a team name, a latitude and longitude
+--   and adds a sensor to the database  
+--c) Create a view of all the teams that have sensors in the Arctic Ocean but not in the Pacific
+--d) Create a procedure that returns the oceans ordered based on their wavelength

@@ -1,0 +1,34 @@
+Thread ID: 7
+_________________________
+ExeStack:
+Print statement: 10 +  (2<6) 
+
+SymTable:
+
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 7
+_________________________
+ExeStack:
+
+SymTable:
+
+Out:
+11 
+Heap:
+
+_________________________
+Thread ID: 7
+_________________________
+ExeStack:
+
+SymTable:
+
+Out:
+11 
+Heap:
+
+_________________________

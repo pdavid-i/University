@@ -1,0 +1,29 @@
+%12. Generate all sub-strings of a length 2*n+1, formed from values of 0, 1 or -1, so a1 = ..., a2n+1 = 0 and
+%|a(i+1) - ai| = 1 or 2, for every 1 <= i <= 2n.
+
+%candidat(i, o)
+%candidat(L, E) = e, e E L
+candidat([E|_],E).
+candidat([_|T],E):-candidat(T,E).
+
+%solutie(o, i)
+%solutie(Rez,M) = a1 a2 a3 .... an , where ai E [-1, 0, 1], |a(i+1) - ai| = 1 or 2, length <2m+1
+solutie(Rez,M):-candidat([-1,0,1],E),E=:= 0,solutie_aux([-1,0,1],E,1,Rez,[E],M).
+
+%solutie_aux(i,i,o,o,i)
+%solutie_aux(L,N,P,Rez,[H|T],M) = a1 a2 a3 .... an , where ai E [-1, 0, 1], |a(i+1) - ai| = 1 or 2
+
+solutie_aux(_,E,P,Rez,Rez,M):-P=:= 2*M+1,!.
+solutie_aux(L,N,P,Rez,[H|T],M):-candidat(L,E),
+	                     E=\=N,
+                   solutie_aux(L,E,P+1,Rez,[E|[H|T]],M).
+
+
+
+
+
+
+
+
+
+

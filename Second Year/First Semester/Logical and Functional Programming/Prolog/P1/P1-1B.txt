@@ -1,0 +1,11 @@
+% Write a predicate to add a value v 
+%after 1-st, 2-nd, 4-th, 8-th, ... element in a list.
+
+insertPow2([], _, _, _, []).
+insertPow2([H|T], E, POS, PW, R) :- POS =:= PW, POS1 is POS + 1, PW1 is PW * 2,
+    							insertPow2(T, E, POS1, PW1, RT), 
+    							R = [E, H|RT].
+insertPow2([H|T], E, POS, PW, R) :- POS =\= PW, POS1 is POS + 1,
+    							insertPow2(T, E, POS1, PW, RT), 
+    							R = [H|RT].
+

@@ -1,0 +1,438 @@
+Thread ID: 1
+_________________________
+ExeStack:
+Assign statement: Name v Value: 10; new ( a,22); fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+Assign statement: Name v Value: 10; new ( a,22)
+
+SymTable:
+
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+Assign statement: Name v Value: 10; new ( a,22)
+
+SymTable:
+
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+new ( a,22)
+Assign statement: Name v Value: 10
+
+SymTable:
+
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+new ( a,22)
+Assign statement: Name v Value: 10
+
+SymTable:
+
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+new ( a,22)
+
+SymTable:
+v->10
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+new ( a,22)
+
+SymTable:
+v->10
+Out:
+
+Heap:
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)); Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a))
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+fork(heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a))
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+heapWrite ( a, 30 ) ; Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+Print statement: v
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)
+heapWrite ( a, 30 ) 
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+Print statement: v
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)
+heapWrite ( a, 30 ) 
+
+SymTable:
+a->1v->10
+Out:
+
+Heap:
+1->22
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+10 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+10 
+Heap:
+1->30
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+10 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Assign statement: Name v Value: 32; Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->10
+Out:
+10 
+Heap:
+1->30
+
+_________________________
+Thread ID: 1
+_________________________
+ExeStack:
+
+SymTable:
+a->1v->10
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+Assign statement: Name v Value: 32
+
+SymTable:
+a->1v->10
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+Assign statement: Name v Value: 32
+
+SymTable:
+a->1v->10
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->32
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: v; Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->32
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+Print statement: v
+
+SymTable:
+a->1v->32
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+Print statement: v
+
+SymTable:
+a->1v->32
+Out:
+10 30 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->32
+Out:
+10 30 32 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+Print statement: readHeapExp(a)
+
+SymTable:
+a->1v->32
+Out:
+10 30 32 
+Heap:
+1->30
+
+_________________________
+Thread ID: 10
+_________________________
+ExeStack:
+
+SymTable:
+a->1v->32
+Out:
+10 30 32 30 
+Heap:
+1->30
+
+_________________________
