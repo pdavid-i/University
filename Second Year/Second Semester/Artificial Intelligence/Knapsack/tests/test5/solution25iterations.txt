@@ -1,0 +1,4 @@
+[1, 0, 1, 1, 1, 0, 1, 1]
+Solution for 25 generations
+Best Fitness: 900, Standard Deviation: 1.25
+Time elapsed: 34.591615200042725 seconds

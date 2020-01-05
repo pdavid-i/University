@@ -1,0 +1,4 @@
+[0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1]
+Solution for 10 generations
+Best Fitness: 1456, Standard Deviation: 226.97000000000003
+Time elapsed: 6.978724718093872 seconds
