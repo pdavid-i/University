@@ -1,0 +1,10 @@
+img.thumbnail {
+	height:160px;
+	width:160px;
+	padding-top:25px;
+	padding-left:20px;
+}
+
+#big {
+	padding-top:50px;
+}

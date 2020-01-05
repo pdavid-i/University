@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sort a HTML Table Alphabetically</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+th {
+    cursor: pointer;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<table id="t">
+  <tr>
+    <th class="sort">S</th>
+    <th class="sort">O</th>
+    <th class="sort">R</th>
+    <th class="sort">T</th>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+    <td>12</td>
+    <td>a</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+    <td>6</td>
+    <td>b</td>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+    <td>16</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+    <td>8</td>
+    <td>d</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+    <td>81</td>
+    <td>e</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+    <td>37</td>
+    <td>f</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+    <td>121</td>
+    <td>g</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+    <td>65</td>
+    <td>h</td>
+  </tr>
+    <tr>
+    <th class="swap">S</td>
+    <th class="swap">W</td>
+    <th class="swap">A</td>
+    <th class="swap">P</td>
+  </tr>
+</table>
+
+<script>
+$(".swap").click(function(){
+	$('#t').switchColumns($(this).index(), ($(this).index()+1)%4);
+})
+
+$(".sort").click(function(){
+    var table = $(this).parents('table').eq(0)
+    var rows = table.find('tr:gt(0)')
+    this.asc = !this.asc
+    var last_row = rows.last()
+  <!--  rows.last().remove() -->
+    rows = rows.toArray().sort(comparer($(this).index()))
+    if (!this.asc){rows = rows.reverse()}
+    for (var i = 0; i < rows.length; i++){table.append(rows[i]) }
+    table.append(last_row) 
+})
+function comparer(index) {
+    return function(a, b) {
+        var valA = getCellValue(a, index), valB = getCellValue(b, index)
+        return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+    }
+}
+function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
+
+$.fn.switchColumns = function ( col1, col2 ) {
+    var $this = this,
+        $tr = $this.find('tr');
+
+    $tr.each(function(i, ele){
+        var $ele = $(ele),
+            $td = $ele.find('td'),
+            $tdt;
+        
+        $tdt = $td.eq( col1 ).clone();
+        $td.eq( col1 ).html( $td.eq( col2 ).html() );
+        $td.eq( col2 ).html( $tdt.html() );
+    });
+};
+
+</script>
+
+</body>
+</html>

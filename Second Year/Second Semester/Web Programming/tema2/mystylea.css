@@ -1,0 +1,10 @@
+.card {
+       background: url("download.jpg") no-repeat;
+	width: 700px;
+        height: 900px;
+}
+.card:hover {
+	width: 700px;
+        height: 900px;
+        background: url("painting.jpg") no-repeat;
+}

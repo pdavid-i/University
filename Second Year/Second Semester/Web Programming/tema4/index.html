@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="background.jpg">
+
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="cloud.png" alt="Smiley">
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="heart.png" alt="Smiley">
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="friends.png" alt="Smiley">
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="baseball.png" alt="Smiley">
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="fishin.png" alt="Smiley">
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="gigel.png" alt="Smiley">
+<img class="thumbnail" onmouseover="bigImg(this)" onmouseout=revert() src="fluff.png" alt="Smiley">
+
+<div id="big"><img id="bigbig" src="" style="display:block;margin:auto;" alt="Smile"></div>
+<script>
+function bigImg(x) {      
+	var y = document.getElementById("bigbig");
+	y.src = x.src;
+	y.width = 2*x.width;
+	y.height = 2*x.height;
+}
+
+function revert() {
+	var y = document.getElementById("bigbig");
+	y.src = "cloud.png";
+	y.width="0";
+	y.height="0";
+}
+
+</script>
+
+</body>
+</html>

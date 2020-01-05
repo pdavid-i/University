@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  margin:auto;
+  background-color: #440066;
+  height: 20px;
+  padding-left:5px;
+}
+
+
+.topnav a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.searchbar{
+	padding-top:15px;
+	padding-bottom:0px;
+	padding-right:100px;
+	width:100%;
+	height:65px;
+ 	background-color: #ffffff;
+	text-align:center;
+}
+
+.searchbar img{
+	float:left;
+	padding-left: 10px;	
+	padding-right: 25px;
+}
+
+.searchbar ul{
+	margin:auto;
+	list-style-type: none;
+}
+
+.searchbar input[type=text]{
+	width: 50%;
+	float: left;
+	height:40px;
+	padding-right:20px;
+}
+
+.searchbar p{
+	padding: 0px 70px;
+	float: right;
+	color:#660066;	
+	font-weight: bold;
+	padding-bottom:10px;
+	font-size:17px;
+}
+
+#autentificare {
+	color:#660066;	
+	font-size:13px;
+ 	padding: 4px;
+	text-align:center;
+	border: 1px solid #660066;
+	border-width:3px;
+	border-radius: 3px;
+	line-height:10px;
+}
+
+.midnav {
+  margin:auto;
+  background-color: #ffffff;
+  height: 50px;
+  padding-left:15px;
+}
+
+
+.midnav a {
+  font-weight:bold;
+  float: left;
+  color: #4d0099;
+  text-align: center;
+  padding: 5px 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.news {
+	width:71%;
+	height:100%;
+	float: left;
+	background-color:white;
+}
+
+.weather{
+	height:100%;
+	width:29%;
+	float: left;
+	background-color:blue;
+}
+
+.news_box{
+padding-left:15px;
+padding-bottom:15px;
+padding-top:15px;
+height:150px;
+background-color:white;
+}
+
+.news_box img{
+padding:0px 20px;
+float:left;
+}
+
+.text_container {
+	float:left;
+}
+
+.text_container h3{
+	color:#300070;
+
+}
+
+.text_container p{
+	padding:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#777777;
+}
+
+#meteo{
+	position:absolute;
+	right: 20px;
+	top: 200px;
+}
+
+.mein{
+	float:up;
+}
+
+.fixeddiv{
+	position:fixed;
+	width:100%;	height:180px;
+	background-color:white;
+}
